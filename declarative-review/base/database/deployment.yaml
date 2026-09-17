@@ -43,7 +43,7 @@ spec:
           envFrom:
             - configMapRef:
                 name: database
-          image: registry.lab.example.com:8443/rhel10/postgresql-18:1784149055
+          image: registry.redhat.io/rhel10/postgresql-18
           imagePullPolicy: Always
           livenessProbe:
             exec:
