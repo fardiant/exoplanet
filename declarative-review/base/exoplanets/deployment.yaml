@@ -18,6 +18,16 @@ spec:
         app: exoplanets
       name: exoplanets
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - exoplanets
+            topologyKey: "kubernetes.io/hostname"
       containers:
         - envFrom:
             - configMapRef:
