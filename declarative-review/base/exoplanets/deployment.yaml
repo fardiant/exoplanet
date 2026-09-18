@@ -31,7 +31,7 @@ spec:
       containers:
         - envFrom:
             - configMapRef:
-                name: db-configs
+                name: db-config
             - secretRef:
                 name: db-secrets
           image: docker.io/calvarado2004/exoplanets
