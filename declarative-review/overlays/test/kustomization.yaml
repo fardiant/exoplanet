@@ -7,3 +7,7 @@ patches:
     target:
       kind: Deployment
       name: exoplanets
+  - path: patch-route.yaml
+    target:
+      kind: Route
+      name: exoplanets
